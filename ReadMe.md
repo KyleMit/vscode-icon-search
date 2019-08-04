@@ -1,5 +1,7 @@
 # VS Code Icon Search
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/80656cba-e373-4294-b73f-4302b11e7ef5/deploy-status)](https://app.netlify.com/sites/icon-search/deploys)
+
 Browse and Search through the [VS Code Icon Pack](https://github.com/vscode-icons/vscode-icons)
 
 ## Getting Started
