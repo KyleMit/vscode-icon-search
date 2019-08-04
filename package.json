@@ -1,0 +1,26 @@
+{
+  "name": "vscode-icon-explorer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx eleventy",
+    "serve": "npx eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vscode-icons/vscode-icons.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vscode-icons/vscode-icons/issues"
+  },
+  "homepage": "https://github.com/vscode-icons/vscode-icons#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.8.3",
+    "clean-css": "^4.2.1",
+    "terser": "^4.1.3"
+  }
+}

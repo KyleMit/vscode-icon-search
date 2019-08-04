@@ -1,0 +1,109 @@
+/* layout */
+body {
+    background: #f9f9ff;
+    padding: 2em;
+}
+
+.icon-grid {
+    padding: 1em;
+}
+
+section {
+    text-align: center;
+}
+
+
+/* icons */
+figure.icon {
+    display: inline-flex;
+    flex-direction: column;
+    margin: .5em;
+    padding: .5em;
+    align-items: center;
+    width: 70px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: white;
+    transition: background .4s ease, border-color .4s ease;
+}
+
+figure.icon.favorite {
+    background: #98d599;
+}
+
+figure.icon:hover {
+    border-color: green;
+    background: #bfe3c0;
+}
+
+figure.icon img {
+    height: 50px;
+}
+
+figcaption {
+    word-break: break-word;
+}
+
+/* only fave */
+.only-show-fave figure.icon:not(.favorite) {
+    display: none;
+}
+
+/* minimal rules */
+.minimal figcaption {
+    display: none;
+}
+
+.minimal .icon {
+    width: 60px;
+    filter: saturate(0.5)opacity(0.5);
+}
+
+.minimal figure.icon.favorite {
+    background: white;
+}
+
+
+
+/* show name */
+.show-name .block {
+    display: flex;
+}
+
+.icon-grid {
+    position: relative;
+}
+
+.block {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    display: none;
+}
+
+.contents {
+    font-size: 7em;
+    z-index: 1;
+    font-family: rubik;
+    text-shadow: 0px 0px 10px #8d9cb3, 1px 1px 5px #8b9eb1;
+    margin-top: -89px;
+    font-weight: bold;
+}
+
+/* form inputs */
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form input {
+    margin-left: 20px;
+}

@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+  
+  <title> VS Code Icon Search </title>
+  {# capture the CSS content as a Nunjucks variable #}
+  {% set css %}{% include "styles.css" %}{% endset %}
+  {# feed it through our cssmin filter to minify #}
+  <style type="text/css">
+      {{css | cssmin | safe}}
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <section>
+      <h1>VS Code Icon Search </h1>
+
+      <form>
+        <input type="checkbox" id="favorites" name="favorites" value="on">  
+        <label for="favorites">Only Show Favorites?</label>  
+
+        <input type="checkbox" id="minimal" name="minimal" value="on">  
+        <label for="minimal">Show Minimal UI?</label>  
+
+        <input type="checkbox" id="show-name" name="show-name" value="on">  
+        <label for="show-name">Show Name?</label>  
+      </form>
+    </section>
+    
+    <div class="icon-grid">
+
+      <div class="block">
+        <div class="contents" contenteditable="true">Kyle Mitofsky</div>
+      </div>
+
+      {% for icon in icons %}
+
+        <figure class="icon {{icon.className}}">
+          <img src="{{icon.path}}" alt="{{con.name}}" />
+          <figcaption>{{icon.name}}</figcaption>
+        </figure> 
+
+      {% endfor %}
+
+    </div>
+  </main>
+
+  <!-- capture the JS content as a Nunjucks variable -->
+  {% set js %}{% include "script.js" %}{% endset %}
+  <!-- feed it through our jsmin filter to minify -->
+  <script type="text/javascript">
+    {{ js | jsmin | safe }}
+  </script>
+</body>
+
+</html>
